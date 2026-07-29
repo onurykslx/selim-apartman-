@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #efede2;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(22, 48, 43, 0.045) 1px, transparent 0);
+  background-size: 22px 22px;
+}
+
+::selection {
+  background-color: #d9a441;
+  color: #16302b;
+}
+
+.stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.28rem 0.65rem;
+  border: 2px solid currentColor;
+  border-radius: 3px;
+  transform: rotate(-3deg);
+  position: relative;
+}
+
+.stamp::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  opacity: 0.5;
+}
+
+.stamp-paid {
+  color: #1f6e4a;
+}
+
+.stamp-unpaid {
+  color: #a23b2e;
+  transform: rotate(2deg);
+}
+
+.ledger-card {
+  background: #f7f5ec;
+  border: 1px solid #dcd8c6;
+  box-shadow: 0 1px 0 #dcd8c6, 0 8px 20px -12px rgba(22, 48, 43, 0.25);
+}
+
+.tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
